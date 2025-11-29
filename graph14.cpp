@@ -8,12 +8,15 @@ public:
     void dfs(int node, int parent, vector<vector<pair<int, int>>>& adj, vector<bool>& visited) {
         visited[node] = true;
         
-        for (auto& [child, sign] : adj[node]) {
-            if (!visited[child]) {
-                count += sign;  // if sign == 1, this edge needs to be reversed
-                dfs(child, node, adj, visited);
-            }
-        }
+        for (auto &p : adj[node]) {
+    int child = p.first;
+    int sign  = p.second;
+
+    if (!visited[child]) {
+        count += sign;
+        dfs(child, node, adj, visited);
+    }
+}
     }
 
     int minReorder(int n, vector<vector<int>>& connections) {
