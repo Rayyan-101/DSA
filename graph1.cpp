@@ -40,7 +40,6 @@ public:
             }
             level++;
         }
-
         return -1;
     }
 };
