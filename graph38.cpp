@@ -1,48 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 int countSteps(int ringIndex, int i, int n) {
-        int dist       = abs(i - ringIndex);
-        int wrapAround =  n - dist;
-        
-        return min(dist, wrapAround);
+    int dist = abs(i - ringIndex);
+    int wrapAround = n - dist;
+    return min(dist, wrapAround);
+}
+
+int findRotateSteps(string ring, string key) {
+    int n = ring.length();
+    int m = key.length();
+
+    // Precompute indices for each character in ring
+    unordered_map<char, vector<int>> adj;
+    for (int i = 0; i < n; i++) {
+        adj[ring[i]].push_back(i);
     }
-    
-    int findRotateSteps(string ring, string key) {
-        int n = ring.length();
-        int m = key.length();
-        
-        unordered_map<char, vector<int>> adj; // char --> {indices in ring where char is present}
-        for (int i = 0; i < n; i++) {
-            char ch = ring[i];
-            adj[ch].push_back(i);
+
+    // Min-heap: {steps, ringIndex, keyIndex}
+    priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> pq;
+    pq.push({0, 0, 0});  // starting at index 0, key index 0
+
+    set<pair<int, int>> visited;  // {ringIndex, keyIndex}
+
+    int totalSteps = 0;
+
+    while (!pq.empty()) {
+        auto vec = pq.top();
+        pq.pop();
+
+        totalSteps = vec[0];
+        int ringIndex = vec[1];
+        int keyIndex = vec[2];
+
+        // Finished spelling key
+        if (keyIndex == m)
+            break;
+
+        // Skip visited states
+        if (visited.count({ringIndex, keyIndex}))
+            continue;
+
+        visited.insert({ringIndex, keyIndex});
+
+        // Try all positions for current key character
+        for (int nextIndex : adj[key[keyIndex]]) {
+            int stepsToRotate = countSteps(ringIndex, nextIndex, n);
+            pq.push({totalSteps + stepsToRotate, nextIndex, keyIndex + 1});
         }
+    }
 
-        priority_queue<vector<int>, vector<vector<int>>, greater<vector<int>>> pq;
-        pq.push({0, 0, 0});
+    return totalSteps + m;  // +m = pressing button each time
+}
 
-        set<pair<int, int>> visited;
-        
-        int totalSteps = 0;
-        while (!pq.empty()) {
-            vector<int> vec = pq.top();
-            pq.pop();
-            
-            totalSteps    = vec[0];
-            int ringIndex = vec[1];
-            int keyIndex  = vec[2];
-            
-            if (keyIndex == m) {
-                break;
-            }
-            
-            if (visited.count({ringIndex, keyIndex})) {
-                continue;
-            }
+int main() {
+    string ring, key;
+    cin >> ring >> key;
 
-            visited.insert({ringIndex, keyIndex});
-            
-            for (int nextIndex : adj[key[keyIndex]]) {
-                pq.push({totalSteps + countSteps(ringIndex, nextIndex, n), 
-                            nextIndex, keyIndex + 1});
-            }
-        }
-        
-        return totalSteps + m;
+    cout << findRotateSteps(ring, key) << "\n";
+
+    return 0;
+}
