@@ -1,71 +1,97 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 #define P pair<int, int>
 
-    // Khandaani Dijkstra's algorithm to find shortest paths from a source city
-    void dijkstra(int n, unordered_map<int, vector<P>>& adj, vector<int>& result, int S) {
-        priority_queue<P, vector<P>, greater<P>> pq;
-        pq.push({0, S});
-        fill(result.begin(), result.end(), INT_MAX);
-        result[S] = 0;  // Distance to source itself is zero
+// Standard Dijkstra's algorithm
+void dijkstra(int n, unordered_map<int, vector<P>>& adj, vector<int>& result, int S) {
+    priority_queue<P, vector<P>, greater<P>> pq;
+    pq.push({0, S});
 
-        // Process nodes in priority order
-        while (!pq.empty()) {
-            int d = pq.top().first;
-            int node = pq.top().second;
-            pq.pop();
+    fill(result.begin(), result.end(), INT_MAX);
+    result[S] = 0;
 
-            for (auto& p : adj[node]) {
-                int adjNode = p.first;
-                int dist = p.second;
+    while (!pq.empty()) {
+        int d = pq.top().first;
+        int node = pq.top().second;
+        pq.pop();
 
-                if (d + dist < result[adjNode]) {
-                    result[adjNode] = d + dist;
-                    pq.push({d + dist, adjNode});
-                }
+        // Explore neighbors
+        for (auto& p : adj[node]) {
+            int adjNode = p.first;
+            int dist = p.second;
+
+            if (d + dist < result[adjNode]) {
+                result[adjNode] = d + dist;
+                pq.push({d + dist, adjNode});
             }
         }
     }
+}
 
-    int getCityWithFewestReachable(int n, const vector<vector<int>>& shortestPathMatrix, int distanceThreshold) {
-        int cityWithFewestReachable = -1;
-        int fewestReachableCount = INT_MAX;
+// Determine city with fewest reachable neighbors
+int getCityWithFewestReachable(int n, const vector<vector<int>>& shortestPathMatrix,
+                               int distanceThreshold) {
+    int cityWithFewestReachable = -1;
+    int fewestReachableCount = INT_MAX;
 
-        // Count number of cities reachable within the distance threshold for each city
-        for (int i = 0; i < n; i++) {
-            int reachableCount = 0;
-            for (int j = 0; j < n; j++) {
-                if (i != j && shortestPathMatrix[i][j] <= distanceThreshold) {
-                    reachableCount++;
-                }
-            }
+    for (int i = 0; i < n; i++) {
+        int reachableCount = 0;
 
-            if (reachableCount <= fewestReachableCount) {
-                fewestReachableCount = reachableCount;
-                cityWithFewestReachable = i;
+        for (int j = 0; j < n; j++) {
+            if (i != j && shortestPathMatrix[i][j] <= distanceThreshold) {
+                reachableCount++;
             }
         }
-        return cityWithFewestReachable;
+
+        // Tie-breaking: choose the city with the **greatest index**
+        if (reachableCount <= fewestReachableCount) {
+            fewestReachableCount = reachableCount;
+            cityWithFewestReachable = i;
+        }
+    }
+    return cityWithFewestReachable;
+}
+
+int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
+    unordered_map<int, vector<P>> adj;
+    vector<vector<int>> shortestPathMatrix(n, vector<int>(n, INT_MAX));
+
+    for (int i = 0; i < n; i++)
+        shortestPathMatrix[i][i] = 0;
+
+    for (auto& edge : edges) {
+        int u = edge[0], v = edge[1], w = edge[2];
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
     }
 
-    int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
-        unordered_map<int, vector<P>> adj;
+    // Run Dijkstra for each city
+    for (int i = 0; i < n; i++) {
+        dijkstra(n, adj, shortestPathMatrix[i], i);
+    }
 
-        vector<vector<int>> shortestPathMatrix(n, vector<int>(n, INT_MAX));
+    return getCityWithFewestReachable(n, shortestPathMatrix, distanceThreshold);
+}
 
-        for (int i = 0; i < n; i++) {
-            shortestPathMatrix[i][i] = 0;  // Distance to itself is zero
-        }
 
-        for (const auto& edge : edges) {
-            int start = edge[0];
-            int end = edge[1];
-            int weight = edge[2];
-            adj[start].push_back({end, weight});
-            adj[end].push_back({start, weight});
-        }
+// ---------------------------
+//            MAIN
+// ---------------------------
 
-        // Compute shortest paths from each city using Dijkstra's algorithm
-        for (int i = 0; i < n; i++) {
-            dijkstra(n, adj, shortestPathMatrix[i], i);
-        }
+int main() {
+    int n, m, threshold;
+    cout << "Enter number of cities (n), number of edges (m), and distance threshold: ";
+    cin >> n >> m >> threshold;
 
-        return getCityWithFewestReachable(n, shortestPathMatrix, distanceThreshold);
+    vector<vector<int>> edges(m, vector<int>(3));
+    cout << "Enter edges: u v w\n";
+    for (int i = 0; i < m; i++) {
+        cin >> edges[i][0] >> edges[i][1] >> edges[i][2];
+    }
+
+    int city = findTheCity(n, edges, threshold);
+    cout << "City with fewest reachable neighbors within threshold = " << city << endl;
+
+    return 0;
+}
