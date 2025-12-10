@@ -1,42 +1,73 @@
-#define P pair<int, pair<int, int>>
-    vector<vector<int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-    
-    int minimumObstacles(vector<vector<int>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
+#include <bits/stdc++.h>
+using namespace std;
 
-        vector<vector<int>> result(m, vector<int>(n, INT_MAX));
-        //result[i][j] = minimum distance/obstacleCount between [0][0] to [i][j]
-        result[0][0] = 0;
+#define P pair<int, pair<int,int>>
 
-        priority_queue<P, vector<P>, greater<P>> pq;
-        pq.push({0, {0, 0}}); //{wt, {i, j}}
-        //O(Elog(V))
-        // E = number of edges
-        // V = number of vertices
-        while(!pq.empty()) {
-            auto curr = pq.top();
-            pq.pop();
+vector<vector<int>> directions = {
+    {0, 1}, {0, -1}, {1, 0}, {-1, 0}
+};
 
-            int d = curr.first;
-            int i = curr.second.first;
-            int j = curr.second.second;
+int minimumObstacles(vector<vector<int>>& grid) {
+    int m = grid.size();
+    int n = grid[0].size();
 
-            for(auto &dir : directions) {
-                int x = i + dir[0];
-                int y = j + dir[1];
+    vector<vector<int>> result(m, vector<int>(n, INT_MAX));
+    result[0][0] = 0;
 
-                if(x < 0 || x >= m || y < 0 || y >= n) {
-                    continue;
-                }
+    priority_queue<P, vector<P>, greater<P>> pq;
+    pq.push({0, {0, 0}});  // {cost, {i, j}}
 
-                int wt = (grid[x][y] == 1) ? 1 : 0;
+    while (!pq.empty()) {
+        auto curr = pq.top();
+        pq.pop();
 
-                if(d + wt < result[x][y]) {
-                    result[x][y] = d + wt;
-                    pq.push({d+wt, {x, y}});
-                }
+        int d = curr.first;
+        int i = curr.second.first;
+        int j = curr.second.second;
+
+        // Early stop: once we pop (m-1, n-1), it's optimal
+        if (i == m - 1 && j == n - 1)
+            return d;
+
+        // Explore 4 directions
+        for (auto& dir : directions) {
+            int x = i + dir[0];
+            int y = j + dir[1];
+
+            if (x < 0 || x >= m || y < 0 || y >= n)
+                continue;
+
+            int wt = (grid[x][y] == 1 ? 1 : 0);
+
+            if (d + wt < result[x][y]) {
+                result[x][y] = d + wt;
+                pq.push({result[x][y], {x, y}});
             }
         }
+    }
 
-        return result[m-1][n-1];
+    return result[m - 1][n - 1];
+}
+
+// ----------------------------
+//            MAIN
+// ----------------------------
+
+int main() {
+    int m, n;
+    cout << "Enter grid dimensions (m n): ";
+    cin >> m >> n;
+
+    vector<vector<int>> grid(m, vector<int>(n));
+
+    cout << "Enter grid (0 for empty, 1 for obstacle):\n";
+    for (int i = 0; i < m; i++)
+        for (int j = 0; j < n; j++)
+            cin >> grid[i][j];
+
+    int ans = minimumObstacles(grid);
+
+    cout << "\nMinimum obstacles to remove = " << ans << endl;
+
+    return 0;
+}
