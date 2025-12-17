@@ -77,7 +77,6 @@ vector<int> minimumCost(int n, vector<vector<int>>& edges, vector<vector<int>>& 
 }
 
 
-// ------------------ MAIN FUNCTION ------------------
 
 int main() {
     int n, m, q;
