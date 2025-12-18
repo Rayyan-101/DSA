@@ -37,7 +37,7 @@ public:
 
         for (int i = 0; i < n; i++) {
             if (!visited[i]) {
-                dist[i] = 1;         // starting depth for this DFS tree
+                dist[i] = 1;         
                 dfs(i, edges, visited, dist, inRecursion);
             }
         }
