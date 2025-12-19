@@ -49,7 +49,7 @@ int main() {
     };
 
     int ans = sol.maximalNetworkRank(n, roads);
-    cout << "Maximal network rank: " << ans << endl;  // Expected: 4
+    cout << "Maximal network rank: " << ans << endl;
 
     return 0;
 }
