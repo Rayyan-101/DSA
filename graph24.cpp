@@ -62,7 +62,6 @@ int main() {
     double ans = sol.maxProbability(n, edges, succProb, start, end);
     cout << fixed << setprecision(5);
     cout << "Maximum probability from " << start << " to " << end << " = " << ans << endl;
-    // Expected: 0.25 (best path 0 -> 1 -> 2 with prob 0.5 * 0.5)
 
     return 0;
 }
