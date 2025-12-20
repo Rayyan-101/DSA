@@ -67,7 +67,7 @@ int main() {
     };
 
     cout << "Maximum bombs detonated: "
-         << sol.maximumDetonation(bombs) << endl;  // Expected: 2
+         << sol.maximumDetonation(bombs) << endl;  
 
     return 0;
 }
