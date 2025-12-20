@@ -59,7 +59,6 @@ int main() {
 
     int ans = sol.closestMeetingNode(edges, node1, node2);
     cout << "Closest meeting node: " << ans << endl;  
-    // Expected output: 2
 
     return 0;
 }
