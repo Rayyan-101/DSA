@@ -22,6 +22,7 @@ public:
     int minReorder(int n, vector<vector<int>>& connections) {
         vector<vector<pair<int, int>>> adj(n);
         
+        // sign = 1 means original direction is from u -> v (might need to reverse)
         // sign = 0 means v -> u (already towards 0 direction if we go correctly)
         for (auto& connection : connections) {
             int u = connection[0];
