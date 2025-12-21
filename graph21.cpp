@@ -40,6 +40,7 @@ int main() {
     for (int x : ans) cout << x << " ";
     cout << endl;
 
+    // Expected output: 0 3 (order may vary)
 
     return 0;
 }
