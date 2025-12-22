@@ -60,6 +60,7 @@ int main() {
     int n2 = 3;
     vector<vector<int>> dislikes2 = {{1,2}, {1,3}, {2,3}};
     cout << (sol.possibleBipartition(n2, dislikes2) ? "true" : "false") << endl;
+    // Expected: false
 
     int n3 = 5;
     vector<vector<int>> dislikes3 = {{1,2},{2,3},{3,4},{4,5},{1,5}};
