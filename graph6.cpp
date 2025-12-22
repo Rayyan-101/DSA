@@ -36,7 +36,7 @@ public:
             adj[v].push_back(u);
         }
         
-        vector<int> color(n + 1, -1); // 1-based indexing
+        vector<int> color(n + 1, -1); 
         
         for (int i = 1; i <= n; i++) {
             if (color[i] == -1) {  // not visited
