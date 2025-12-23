@@ -11,7 +11,6 @@ public:
         N = n;
         adj = vector<vector<int>>(n, vector<int>(n, INF));
         
-        // initialize from given edges
         for (auto &vec : edges) {
             int u    = vec[0];
             int v    = vec[1];
