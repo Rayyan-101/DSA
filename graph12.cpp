@@ -66,7 +66,8 @@ int main() {
     int src = 0, dst = 3, k = 1;
 
     int ans = sol.findCheapestPrice(n, flights, src, dst, k);
-    cout << "Cheapest price: " << ans << endl;  
+    cout << "Cheapest price: " << ans << endl;  // Expected: 600 (0 -> 2 -> 3 is not allowed with k=1, so 0->1->2->3? Wait, that’s 2 stops: change k to 2 to test more.)
+
     k = 2;
     ans = sol.findCheapestPrice(n, flights, src, dst, k);
     cout << "Cheapest price with k=2: " << ans << endl;  // Expected: 300 (0 -> 1 -> 2 -> 3)
