@@ -70,6 +70,7 @@ int main() {
     cout << "Longest path (example 1): " 
          << sol.longestPath(parent1, s1) << endl; // Expected: 3
 
+    // Example 2:
     vector<int> parent2 = {-1, 0, 0, 0};
     string s2 = "aabc";
     cout << "Longest path (example 2): " 
