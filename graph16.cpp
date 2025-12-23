@@ -54,7 +54,7 @@ int main() {
 
     vector<int> edges2 = {2,-1,3,1};
     cout << "Longest cycle length (example 2): " 
-         << sol.longestCycle(edges2) << endl;  // Expected: -1 (no cycle)
+         << sol.longestCycle(edges2) << endl;  
 
     return 0;
 }
