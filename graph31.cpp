@@ -16,7 +16,7 @@ public:
             int u    = vec[0];
             int v    = vec[1];
             int cost = vec[2];
-            adj[u][v] = min(adj[u][v], cost);  // in case of multiple edges
+            adj[u][v] = min(adj[u][v], cost);  
         }
         
         // distance to self = 0
