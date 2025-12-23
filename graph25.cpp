@@ -59,6 +59,7 @@ int main() {
 
     cout << "Shortest path length = "
          << sol.shortestPathBinaryMatrix(grid) << endl;
+    // Expected output: 2
 
     return 0;
 }
