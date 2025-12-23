@@ -19,6 +19,7 @@ public:
             adj[u][v] = min(adj[u][v], cost);  // in case of multiple edges
         }
         
+        // distance to self = 0
         for (int i = 0; i < n; i++) {
             adj[i][i] = 0;
         }
