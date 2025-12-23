@@ -27,6 +27,7 @@ public:
         // Floyd–Warshall to precompute all-pairs shortest paths
         for (int k = 0; k < n; k++) {
             for (int i = 0; i < N; i++) {
+                // small optimization: skip if i→k is INF
                 if (adj[i][k] == INF) continue;
                 for (int j = 0; j < N; j++) {
                     if (adj[k][j] == INF) continue;
