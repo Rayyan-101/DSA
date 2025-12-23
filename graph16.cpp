@@ -18,8 +18,7 @@ public:
                 dist[v] = dist[u] + 1;
                 dfs(v, edges, visited, dist, inRecursion);
             } 
-            else if (v != -1 && inRecursion[v] == true) { // found a cycle
-                // length of cycle = dist[u] - dist[v] + 1
+            else if (v != -1 && inRecursion[v] == true) { 
                 result = max(result, dist[u] - dist[v] + 1);
             }
 
