@@ -64,7 +64,6 @@ public:
 int main() {
     Solution sol;
 
-    // Example 1:
     vector<int> parent1 = {-1, 0, 0, 1, 1, 2};
     string s1 = "abacbe";
     cout << "Longest path (example 1): " 
