@@ -63,7 +63,6 @@ public:
 };
 
 int main() {
-    // Example:
     int n = 4;
     vector<vector<int>> edges = {
         {0, 1, 5},
