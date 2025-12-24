@@ -47,7 +47,10 @@ public:
 };
 
 int main() {
-    
+    // Example maze:
+    // + . + +
+    // . . . +
+    // + . . .
     vector<vector<char>> maze = {
         {'+','.','+','+'},
         {'.','.','.','+'},
