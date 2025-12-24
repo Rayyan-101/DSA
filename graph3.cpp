@@ -22,6 +22,7 @@ public:
                 pair<int, int> temp = que.front();
                 que.pop();
                 
+                // If it's not the entrance and it's on the boundary, it's an exit
                 if (temp != make_pair(entrance[0], entrance[1]) && 
                     (temp.first == 0 || temp.first == m - 1 || 
                      temp.second == 0 || temp.second == n - 1)) {
