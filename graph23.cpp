@@ -24,7 +24,7 @@ public:
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 
-                if (i == j) // same bomb
+                if (i == j) 
                     continue;
                 
                 LL x1 = bombs[i][0];
