@@ -33,6 +33,7 @@ public:
                 
                 LL x2 = bombs[j][0];
                 LL y2 = bombs[j][1];
+                // LL r2 = bombs[j][2]; // not needed
                 
                 LL distance = (x2 - x1) * (x2 - x1) + 
                               (y2 - y1) * (y2 - y1);
