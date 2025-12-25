@@ -74,7 +74,7 @@ int main() {
     };
 
     cout << "Shortest path length visiting all nodes: "
-         << sol.shortestPathLength(graph) << endl;  // Expected: 4
+         << sol.shortestPathLength(graph) << endl;  
 
     return 0;
 }
