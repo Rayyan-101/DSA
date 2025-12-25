@@ -36,7 +36,7 @@ public:
         
         for (int i = 0; i < n; i++) {
             if (dist1[i] == INT_MAX || dist2[i] == INT_MAX)
-                continue;  
+                continue;  // unreachable, skip
             
             int maxD = max(dist1[i], dist2[i]);
             
