@@ -49,7 +49,9 @@ int minimumObstacles(vector<vector<int>>& grid) {
     return result[m - 1][n - 1];
 }
 
-
+// ----------------------------
+//            MAIN
+// ----------------------------
 
 int main() {
     int m, n;
