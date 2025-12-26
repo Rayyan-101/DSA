@@ -78,9 +78,7 @@ vector<vector<int>> buildMatrix(int k, vector<vector<int>>& rowConditions,
     return matrix;
 }
 
-// ---------------------------
-//            MAIN
-// ---------------------------
+
 
 int main() {
     int k, r, c;
