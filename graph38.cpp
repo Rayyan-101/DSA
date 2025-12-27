@@ -37,6 +37,7 @@ int findRotateSteps(string ring, string key) {
         if (keyIndex == m)
             break;
 
+        // Skip visited states
         if (visited.count({ringIndex, keyIndex}))
             continue;
 
