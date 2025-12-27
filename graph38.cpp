@@ -43,7 +43,6 @@ int findRotateSteps(string ring, string key) {
 
         visited.insert({ringIndex, keyIndex});
 
-        // Try all positions for current key character
         for (int nextIndex : adj[key[keyIndex]]) {
             int stepsToRotate = countSteps(ringIndex, nextIndex, n);
             pq.push({totalSteps + stepsToRotate, nextIndex, keyIndex + 1});
