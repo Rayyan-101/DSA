@@ -82,7 +82,7 @@ int main() {
     };
 
     vector<vector<int>> queries = {
-        {0, 1, 3},  
+        {0, 1, 3},  // path 0-1 with edges < 3?  edge 0-1 has weight 2 -> true
         {0, 3, 5},  // path 0-3 with edges < 5?  needs 0-2(4) and 2-3(5) but 5 !< 5 -> false
         {0, 4, 7}   // path 0-4 with edges < 7?  0-2(4),2-3(5),3-4(6) all < 7 -> true
     };
