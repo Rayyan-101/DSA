@@ -21,7 +21,6 @@ public:
         int n = s1.length();
         unordered_map<char, vector<char>> adj;
         
-        // Build graph of equivalences
         for (int i = 0; i < n; i++) {
             char u = s1[i];
             char v = s2[i];
