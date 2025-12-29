@@ -59,7 +59,7 @@ public:
             }
         }
 
-        return -1; // shouldn't happen for connected graphs
+        return -1; 
     }
 };
 
@@ -70,7 +70,7 @@ int main() {
         {1,2,3},  // 0
         {0},      // 1
         {0},      // 2
-        {0}       
+        {0}       // 3
     };
 
     cout << "Shortest path length visiting all nodes: "
