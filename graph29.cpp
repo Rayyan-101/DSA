@@ -59,7 +59,7 @@ public:
             }
         }
 
-        return -1; 
+        return -1; // shouldn't happen for connected graphs
     }
 };
 
