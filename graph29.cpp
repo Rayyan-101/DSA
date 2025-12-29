@@ -70,7 +70,7 @@ int main() {
         {1,2,3},  // 0
         {0},      // 1
         {0},      // 2
-        {0}       // 3
+        {0}       
     };
 
     cout << "Shortest path length visiting all nodes: "
