@@ -50,7 +50,7 @@ int findRotateSteps(string ring, string key) {
         }
     }
 
-    return totalSteps + m;  // +m = pressing button each time
+    return totalSteps + m; 
 }
 
 int main() {
