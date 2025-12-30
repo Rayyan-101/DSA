@@ -4,7 +4,7 @@ using namespace std;
 class DSU {
 private:
     vector<int> parent;
-    vector<int> rankv;   // renamed from rank to avoid name clashes
+    vector<int> rankv;   
     int components;
 
 public: 
