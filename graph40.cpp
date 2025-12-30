@@ -25,7 +25,7 @@ vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {
     for (auto& vec : edges) {
         int u = vec[0];
         int v = vec[1];
-        adj[u].push_back(v); // u -> v
+        adj[u].push_back(v); 
     }
 
     vector<vector<bool>> visited(n, vector<bool>(n, false));
