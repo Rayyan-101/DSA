@@ -34,7 +34,6 @@ vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {
         DFS(i, adj, i, result, visited);
     }
 
-    // Sort each ancestor list as problem usually requires sorted results
     for (int i = 0; i < n; i++) {
         sort(result[i].begin(), result[i].end());
     }
