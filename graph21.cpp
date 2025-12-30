@@ -9,7 +9,7 @@ public:
         for (auto &edge : edges) {
             int u = edge[0];
             int v = edge[1];
-            indegree[v] = true;  
+            indegree[v] = true;  // mark incoming node
         }
 
         vector<int> result;
