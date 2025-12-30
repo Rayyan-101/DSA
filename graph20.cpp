@@ -49,7 +49,6 @@ public:
 class Solution {
 public:
     int maxNumEdgesToRemove(int n, vector<vector<int>>& edges) {
-        // Sort by type descending so type 3 (shared) edges come first
         auto lambda = [&](vector<int>& v1, vector<int>& v2) {
             return v1[0] > v2[0];
         };
