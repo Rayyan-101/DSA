@@ -34,7 +34,6 @@ public:
         
         unordered_map<string, vector<pair<string, double>>> adj;
         
-        // Build graph: u/v = val  =>  u->v (val), v->u (1/val)
         for (int i = 0; i < n; i++) {
             string u   = equations[i][0];
             string v   = equations[i][1];
