@@ -53,6 +53,7 @@ public:
             double ans     = -1.0;
             double product = 1.0;
             
+            // Only search if src exists in graph
             if (adj.find(src) != adj.end()) {
                 unordered_set<string> visited;
                 dfs(adj, src, dst, visited, product, ans);
