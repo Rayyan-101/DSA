@@ -118,6 +118,7 @@ int main() {
 
     int ans = sol.maxNumEdgesToRemove(n, edges);
     cout << "Maximum number of removable edges: " << ans << endl; 
+    // Expected: 2
 
     return 0;
 }
