@@ -87,7 +87,6 @@ int main() {
     for (double x : ans) {
         cout << x << "\n";
     }
-    // Expected (LeetCode example): [6.00000,0.50000,-1.00000,1.00000,-1.00000]
 
     return 0;
 }
