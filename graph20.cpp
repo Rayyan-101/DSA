@@ -82,7 +82,7 @@ public:
                 if (add)
                     addedEdge++;
                 
-            } else if (type == 2) {
+            } else if (type == 2) { // Bob only
                 if (Bob.find(u) != Bob.find(v)) {
                     Bob.Union(u, v);
                     addedEdge++;
