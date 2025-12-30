@@ -87,7 +87,7 @@ public:
                     Bob.Union(u, v);
                     addedEdge++;
                 }
-            } else { // type == 1, Alice only
+            } else { 
                 if (Alice.find(u) != Alice.find(v)) {
                     Alice.Union(u, v);
                     addedEdge++;
