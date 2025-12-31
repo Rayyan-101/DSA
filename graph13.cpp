@@ -32,7 +32,7 @@ public:
             adj[v].push_back({u, c});
         }
         
-        vector<bool> visited(n + 1, false); // cities are 1-indexed
+        vector<bool> visited(n + 1, false);
         int result = INT_MAX;
         
         dfs(adj, 1, visited, result);
