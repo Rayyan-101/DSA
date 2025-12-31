@@ -20,7 +20,7 @@ public:
         que.push({src, 0});
         distance[src] = 0;
         
-        int level = 0; // number of edges used so far
+        int level = 0; 
         
         // We are allowed at most k stops -> at most k+1 edges
         while (!que.empty() && level <= k) {
