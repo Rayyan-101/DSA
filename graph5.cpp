@@ -40,6 +40,7 @@ int main() {
 
     cout << (sol.canVisitAllRooms(rooms1) ? "All rooms can be visited" 
                                           : "Cannot visit all rooms") << endl;
+    // Expected: All rooms can be visited
 
     vector<vector<int>> rooms2 = {
         {1,3},
