@@ -30,7 +30,7 @@ public:
         // Best chain going *down* from this node (including itself)
         int koi_ek_acha = longest + 1; // include curr node
         
-        int only_root_acha = 1; // just the node itself
+        int only_root_acha = 1; 
         
         // Best path *through* this node using two child branches + curr
         int neeche_hi_milgaya_answer = longest + second_longest + 1;
