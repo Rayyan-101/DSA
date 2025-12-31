@@ -46,7 +46,7 @@ public:
         result = 0;
         unordered_map<int, vector<int>> adj;
         
-        // Build undirected tree
+        
         for (int i = 1; i < n; i++) {
             int u = i;
             int v = parent[i];
