@@ -19,6 +19,7 @@ public:
             if (s[child] == s[curr])
                 continue;
             
+            // Maintain top two longest child chains
             if (child_longest_length > second_longest)
                 second_longest = child_longest_length;
             
