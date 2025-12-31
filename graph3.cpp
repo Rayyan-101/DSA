@@ -35,7 +35,7 @@ public:
 
                     if (i >= 0 && i < m && j >= 0 && j < n && maze[i][j] != '+') {
                         que.push({i, j});
-                        maze[i][j] = '+'; // mark as visited
+                        maze[i][j] = '+'; 
                     }
                 }
             }
