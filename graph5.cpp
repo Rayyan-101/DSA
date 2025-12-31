@@ -17,7 +17,6 @@ public:
         int n = rooms.size();
         vector<bool> visited(n, false);
 
-        // Start DFS from room 0
         dfs(rooms, 0, visited);
         
         // Check if all rooms are visited
