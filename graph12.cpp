@@ -26,7 +26,8 @@ public:
         while (!que.empty() && level <= k) {
             int N = que.size();
             
-            
+            // To avoid affecting other nodes in the same level,
+            // we use a temp copy of distance
             vector<int> temp = distance;
             
             while (N--) {
