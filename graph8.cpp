@@ -12,8 +12,7 @@ public:
             
             int childTime = DFS(adj, child, curr, hasApple);
             
-            // If child subtree has apples or the child itself has an apple,
-            // we need to go to that child and come back => +2 edges
+            
             if (childTime > 0 || hasApple[child]) {
                 time += 2 + childTime;
             }
