@@ -22,6 +22,7 @@ public:
         
         int level = 0; // number of edges used so far
         
+        // We are allowed at most k stops -> at most k+1 edges
         while (!que.empty() && level <= k) {
             int N = que.size();
             
