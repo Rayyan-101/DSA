@@ -7,7 +7,7 @@ public:
         queue<int> que;
         
         que.push(node);
-        color[node] = 1;  
+        color[node] = 1;  // assign first color
         
         while (!que.empty()) {
             int u = que.front();
