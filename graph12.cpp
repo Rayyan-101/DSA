@@ -16,7 +16,7 @@ public:
             adj[u].push_back({v, cost});
         }
         
-        queue<pair<int, int>> que; 
+        queue<pair<int, int>> que; // {node, cost_so_far}
         que.push({src, 0});
         distance[src] = 0;
         
