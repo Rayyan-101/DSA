@@ -50,7 +50,7 @@ int main() {
     };
 
     int ans = sol.minReorder(n, connections);
-    cout << "Minimum roads to reorder: " << ans << endl; 
+    cout << "Minimum roads to reorder: " << ans << endl;  // Expected: 3
 
     return 0;
 }
