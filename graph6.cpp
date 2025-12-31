@@ -17,7 +17,7 @@ public:
                 if (color[v] == color[u])
                     return false;  // same color on both ends -> not bipartite
                 
-                if (color[v] == -1) { // not colored yet
+                if (color[v] == -1) { 
                     color[v] = 1 - color[u];
                     que.push(v);
                 }
