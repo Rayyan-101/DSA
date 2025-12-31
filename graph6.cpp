@@ -39,7 +39,7 @@ public:
         vector<int> color(n + 1, -1); // 1-based indexing
         
         for (int i = 1; i <= n; i++) {
-            if (color[i] == -1) {  
+            if (color[i] == -1) {  // not visited
                 if (!isBipartite(adj, i, color))
                     return false;
             }
