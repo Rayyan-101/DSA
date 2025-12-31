@@ -15,6 +15,7 @@ public:
             
             int child_longest_length = DFS(adj, child, curr, s);
             
+            // Adjacent chars must be different
             if (s[child] == s[curr])
                 continue;
             
