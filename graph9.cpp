@@ -27,6 +27,7 @@ public:
                 swap(longest, second_longest);
         }
         
+        // Best chain going *down* from this node (including itself)
         int koi_ek_acha = longest + 1; // include curr node
         
         int only_root_acha = 1; // just the node itself
