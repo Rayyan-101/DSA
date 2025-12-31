@@ -12,7 +12,7 @@ public:
             int v = vec.first;
             int c = vec.second;
             
-            result = min(result, c);  // track min edge on all reachable paths
+            result = min(result, c); 
             
             if (!visited[v]) {
                 dfs(adj, v, visited, result);
