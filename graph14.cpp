@@ -27,7 +27,7 @@ public:
         for (auto& connection : connections) {
             int u = connection[0];
             int v = connection[1];
-            adj[u].push_back({v, 1}); // original direction u -> v
+            adj[u].push_back({v, 1});
             adj[v].push_back({u, 0}); // reverse edge v -> u with sign 0
         }
         
