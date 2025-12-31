@@ -48,7 +48,7 @@ int main() {
     int destination = 5;
 
     bool ans = sol.validPath(n, edges, source, destination);
-    cout << (ans ? "Path exists" : "No path") << endl;  
+    cout << (ans ? "Path exists" : "No path") << endl;  // Expected: No path
 
     // Another test where path exists
     n = 3;
