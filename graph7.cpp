@@ -23,7 +23,7 @@ public:
         vector<int> temp;
 
         target = graph.size() - 1;
-        temp.push_back(0);  
+        temp.push_back(0);  // start from node 0
         
         dfs(graph, 0, temp, result);
         
