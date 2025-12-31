@@ -51,7 +51,6 @@ int main() {
 
     cout << (sol.canVisitAllRooms(rooms2) ? "All rooms can be visited" 
                                           : "Cannot visit all rooms") << endl;
-    // Expected: Cannot visit all rooms
 
     return 0;
 }
