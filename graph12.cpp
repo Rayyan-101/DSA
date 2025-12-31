@@ -8,6 +8,7 @@ public:
         
         unordered_map<int, vector<pair<int, int>>> adj;
         
+        // Build adjacency list: u -> (v, cost)
         for (vector<int> &vec : flights) {
             int u    = vec[0];
             int v    = vec[1];
