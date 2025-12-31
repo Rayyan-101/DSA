@@ -20,6 +20,7 @@ public:
         // Start DFS from room 0
         dfs(rooms, 0, visited);
         
+        // Check if all rooms are visited
         for (bool x : visited) {
             if (!x) return false;
         }
