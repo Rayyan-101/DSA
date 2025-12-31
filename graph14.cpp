@@ -28,7 +28,7 @@ public:
             int u = connection[0];
             int v = connection[1];
             adj[u].push_back({v, 1}); // original direction u -> v
-            adj[v].push_back({u, 0}); 
+            adj[v].push_back({u, 0}); // reverse edge v -> u with sign 0
         }
         
         vector<bool> visited(n, false);
