@@ -44,7 +44,7 @@ public:
     }
 };
 
-// Main
+// Main Function
 
 int main() {
     Solution sol;
