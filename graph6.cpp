@@ -65,6 +65,7 @@ int main() {
     int n3 = 5;
     vector<vector<int>> dislikes3 = {{1,2},{2,3},{3,4},{4,5},{1,5}};
     cout << (sol.possibleBipartition(n3, dislikes3) ? "true" : "false") << endl;
+    // Example extra test
 
     return 0;
 }
