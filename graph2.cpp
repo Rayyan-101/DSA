@@ -9,6 +9,7 @@ public:
         visited[index] = true;
 
         for (int i = 0; i < n; i++) {
+            // If not visited and shares row or column
             if (!visited[i] && 
                 (stones[i][0] == stones[index][0] || stones[i][1] == stones[index][1])) {
                 dfs(stones, i, visited);
