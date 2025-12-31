@@ -11,7 +11,7 @@ public:
         
         queue<pair<int, int>> que;
         que.push({entrance[0], entrance[1]});
-        maze[entrance[0]][entrance[1]] = '+'; // marking entrance as visited
+        maze[entrance[0]][entrance[1]] = '+'; 
         
         int steps = 0;
         
