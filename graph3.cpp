@@ -62,7 +62,7 @@ int main() {
     Solution sol;
     int ans = sol.nearestExit(maze, entrance);
 
-    cout << "Nearest exit steps: " << ans << endl;  // Expected output: 2
+    cout << "Nearest exit steps: " << ans << endl;  
 
     return 0;
 }
