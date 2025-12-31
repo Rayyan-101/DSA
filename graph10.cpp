@@ -51,7 +51,6 @@ int main() {
 
     string ans = sol.smallestEquivalentString(s1, s2, baseStr);
     cout << "Smallest equivalent string: " << ans << endl;
-    // Expected output: "makkek"
 
     return 0;
 }
