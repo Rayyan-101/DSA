@@ -70,7 +70,7 @@ int main() {
 
     k = 2;
     ans = sol.findCheapestPrice(n, flights, src, dst, k);
-    cout << "Cheapest price with k=2: " << ans << endl; 
+    cout << "Cheapest price with k=2: " << ans << endl;  // Expected: 300 (0 -> 1 -> 2 -> 3)
 
     return 0;
 }
