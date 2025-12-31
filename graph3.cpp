@@ -57,7 +57,7 @@ int main() {
         {'+','.','.','.'}
     };
 
-    vector<int> entrance = {1, 0}; // row 1, col 0
+    vector<int> entrance = {1, 0}; 
 
     Solution sol;
     int ans = sol.nearestExit(maze, entrance);
