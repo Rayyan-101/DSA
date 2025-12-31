@@ -37,7 +37,6 @@ public:
         
         result = max({result, neeche_hi_milgaya_answer, koi_ek_acha, only_root_acha});
         
-        // Return longest chain starting at curr and going down
         return max(koi_ek_acha, only_root_acha);
     }
     
