@@ -50,7 +50,7 @@ int main() {
 
     vector<int> edges1 = {3,3,4,2,3};
     cout << "Longest cycle length (example 1): " 
-         << sol.longestCycle(edges1) << endl; 
+         << sol.longestCycle(edges1) << endl;  // Expected: 3
 
     vector<int> edges2 = {2,-1,3,1};
     cout << "Longest cycle length (example 2): " 
