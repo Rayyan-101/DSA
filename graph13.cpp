@@ -54,6 +54,7 @@ int main() {
 
     int answer = sol.minScore(n, roads);
     cout << "Minimum score: " << answer << endl;
+    // Expected output: 5
 
     return 0;
 }
