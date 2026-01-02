@@ -84,10 +84,7 @@ void printGraph(Node* node) {
 }
 
 int main() {
-    // Build a simple graph:
-    // 1 -- 2
-    // |    |
-    // 4 -- 3
+   
 
     Node* n1 = new Node(1);
     Node* n2 = new Node(2);
