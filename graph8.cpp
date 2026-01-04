@@ -47,6 +47,7 @@ int main() {
 
     int ans = sol.minTime(n, edges, hasApple);
     cout << "Minimum time to collect all apples: " << ans << endl;
+    // Expected output: 8
 
     return 0;
 }
