@@ -20,7 +20,6 @@ public:
         
         unordered_map<int, vector<int>> adj;
         
-        // Build directed graph: edge i -> j if bomb i can detonate bomb j
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 
