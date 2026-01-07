@@ -65,7 +65,6 @@ public:
             result[idx] = (find(u) == find(v));
         }
 
-        return result;
     }
 };
 
