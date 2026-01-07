@@ -56,6 +56,7 @@ int main() {
     };
 
     long long ans = sol.countPairs(n, edges);
+    cout << "Unreachable pairs: " << ans << endl;  
 
     return 0;
 }
