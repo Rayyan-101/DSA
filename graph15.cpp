@@ -34,6 +34,7 @@ public:
                 dfs(i, adj, visited, sizeOfComponent);
                 
                 // pairs between this component and all remaining nodes outside it
+                result += sizeOfComponent * (remainingNodes - sizeOfComponent);
                 remainingNodes -= sizeOfComponent;
             }
         }
