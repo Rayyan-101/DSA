@@ -29,7 +29,6 @@ public:
                 
                 LL x1 = bombs[i][0];
                 LL y1 = bombs[i][1];
-                LL r1 = bombs[i][2];
                 
                 LL x2 = bombs[j][0];
                 LL y2 = bombs[j][1];
