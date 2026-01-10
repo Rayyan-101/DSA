@@ -43,7 +43,10 @@ public:
         }
 
         vector<int> safeNodes;
-       
+        for (int i = 0; i < V; i++) {
+            if (safe[i]) {
+                safeNodes.push_back(i);
+            }
         }
         // They are already in sorted order because we iterate i from 0..V-1
         return safeNodes;
