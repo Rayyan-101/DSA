@@ -21,13 +21,7 @@ public:
         int allVisitedState = (1 << n) - 1; // all bits set => all nodes visited
 
         // Multi-source BFS: start from every node
-        for (int i = 0; i < n; i++) {
-            int maskValue = (1 << i);
-            que.push({i, maskValue});
-            vis.insert({i, maskValue});
-            // vis[i][maskValue] = true; // if using 2D visited array
-        }
-
+        
         int result = 0;
 
         // BFS
