@@ -48,7 +48,8 @@ public:
                 safeNodes.push_back(i);
             }
         }
-       
+        // They are already in sorted order because we iterate i from 0..V-1
+        return safeNodes;
     }
 };
 
