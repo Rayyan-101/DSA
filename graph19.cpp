@@ -73,13 +73,7 @@ int main() {
     Solution sol;
 
     int n = 5;
-    vector<vector<int>> edgeList = {
-        {0, 1, 2},
-        {0, 2, 4},
-        {1, 2, 3},
-        {2, 3, 5},
-        {3, 4, 6}
-    };
+    
 
     vector<vector<int>> queries = {
         {0, 1, 3},  // path 0-1 with edges < 3?  edge 0-1 has weight 2 -> true
