@@ -60,21 +60,7 @@ public:
 };
 
 int main() {
-    Solution sol;
-
-    vector<vector<string>> tickets = {
-        {"MUC","LHR"},
-        {"JFK","MUC"},
-        {"SFO","SJC"},
-        {"LHR","SFO"}
-    };
-
-    vector<string> ans = sol.findItinerary(tickets);
-
-    cout << "Itinerary: ";
-    for (auto &s : ans) cout << s << " ";
-    cout << endl;
-    // Expected: JFK MUC LHR SFO SJC
+    
 
     return 0;
 }
