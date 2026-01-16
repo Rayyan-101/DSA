@@ -24,7 +24,19 @@ public:
                 if (curr == end)
                     return level;
 
-                
+                for (char ch : string("ACGT")) {
+                    for (int i = 0; i < curr.length(); i++) {
+                        string neighbour = curr;
+                        neighbour[i] = ch;
+
+                        if (visited.find(neighbour) == visited.end() &&
+                            bankset.find(neighbour) != bankset.end()) 
+                        {
+                            visited.insert(neighbour);
+                            que.push(neighbour);
+                        }
+                    }
+                }
             }
             level++;
         }
