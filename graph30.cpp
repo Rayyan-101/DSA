@@ -57,7 +57,11 @@ int main() {
 
     cout << "Minimum time to finish all courses: "
          << sol.minimumTime(n, relations, time) << endl;
-    
+    // Explanation:
+    // course 1: 3
+    // course 2: 2 (parallel)
+    // course 3: can start after max(3,2) = 3, so 3 + 5 = 8
+    // Answer: 8
 
     return 0;
 }
