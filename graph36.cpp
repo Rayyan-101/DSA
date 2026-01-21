@@ -22,15 +22,7 @@ vector<int> dijkstra(unordered_map<int, vector<P>>& adj, int src, int n) {
 
         if (visited[currNode]) continue;
 
-        for (auto& nbr : adj[currNode]) {
-            int nextNode = nbr.first;
-            ll nextWt = nbr.second;
-
-            if (dist[nextNode] > currWt + nextWt) {
-                dist[nextNode] = currWt + nextWt;
-                pq.push({currWt + nextWt, nextNode});
-            }
-        }
+        
 
         visited[currNode] = true;
     }
