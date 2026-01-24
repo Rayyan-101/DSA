@@ -41,7 +41,16 @@ long long minimumCost(string source, string target,
 
     long long ans = 0;
 
-    
+    for(int i = 0; i < source.length(); i++) {
+        if(source[i] == target[i]) continue;
+
+        long long best = adjMatrix[source[i] - 'a'][target[i] - 'a'];
+
+        if(best == LLONG_MAX) return -1;  // Not possible
+
+        ans += best;
+    }
+
     return ans;
 }
 
