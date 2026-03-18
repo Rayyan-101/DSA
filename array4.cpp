@@ -16,7 +16,6 @@ public:
         }
 
         int ans = 0;
-
         for(int i = 0; i < rSize; i++){
             for(int j = 0; j < cSize; j++){
                 if(mat[i][j] == 1 && r[i] == 1 && c[j] == 1){
