@@ -4,10 +4,8 @@ using namespace std;
 class Solution {
 public:
     int minMutation(string start, string end, vector<string>& bank) {
-
         unordered_set<string> bankset(bank.begin(), bank.end());
         unordered_set<string> visited;
-
         queue<string> que;
         que.push(start);
         visited.insert(start);
