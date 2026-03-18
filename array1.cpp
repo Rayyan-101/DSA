@@ -1,6 +1,5 @@
 class Solution {
   public:
-  
     bool isPalindrome(int arr){
         string s=to_string(arr);
         int start=0;
