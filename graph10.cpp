@@ -7,13 +7,11 @@ public:
         visited[curr - 'a'] = 1;
         
         char minChar = curr;
-        
         for (char &v : adj[curr]) {
             if (visited[v - 'a'] == 0) {
                 minChar = min(minChar, DFS(adj, v, visited));
             }
         }
-        
         return minChar;
     }
     
