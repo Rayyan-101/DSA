@@ -1,7 +1,6 @@
 class Solution {
   public:
     int countSubarrays(vector<int> &arr) {
-        // code here
         int n=arr.size();
         stack<int>st;
         vector<int>nse(n,n);
