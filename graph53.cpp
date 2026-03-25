@@ -1,7 +1,6 @@
 class Solution {
   public:
     vector<int> minHeightRoot(int V, vector<vector<int>>& edges) {
-        // Code here
         vector<vector<int>>adj(V);
         vector<int>degree(V,0);
         
