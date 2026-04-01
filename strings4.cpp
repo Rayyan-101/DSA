@@ -1,7 +1,6 @@
 class Solution {
   public:
     string minWindow(string &s, string &p) {
-        // code here
         int st = 0;
         int arr[26]{0} , arr1[26]{0};
         for(auto i: p)arr1[i-'a']++;
