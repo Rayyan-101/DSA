@@ -1,7 +1,6 @@
 class Solution {
   public:
     int orangesRot(vector<vector<int>>& grid) {
-        // code here
         if (grid.empty()) return 0;
         
         int n = grid.size();
