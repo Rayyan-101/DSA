@@ -1,7 +1,6 @@
 class Solution {
   public:
     vector<int> countBSTs(vector<int>& arr) {
-        // Code here
         int n = arr.size();
         vector<int> ans;
         vector<int> vec = arr;
