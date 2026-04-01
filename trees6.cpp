@@ -19,7 +19,6 @@
       }
       
     vector<Node*> findPreSuc(Node* root, int key) {
-        // code here
         Node* small = NULL;
         Node* greater = NULL;
         solve(root,key,small,greater);
