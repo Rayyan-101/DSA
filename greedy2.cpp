@@ -1,7 +1,6 @@
 class Solution {
   public:
     int kBitFlips(vector<int>& arr, int k) {
-        // code here
          int n = arr.size(), ops = 0, flips = 0;
         vector<int> flipEnd(n, 0);
         
