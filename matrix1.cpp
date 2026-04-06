@@ -2,7 +2,6 @@ class Solution {
   public:
     int orangesRot(vector<vector<int>>& grid) {
         if (grid.empty()) return 0;
-        
         int n = grid.size();
         int m = grid[0].size();
         queue<pair<int, int>> q;
@@ -19,9 +18,7 @@ class Solution {
         }
     
         if (freshCount == 0) return 0;
-        
         int minutes = 0;
-
         int dirs[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
         
  
