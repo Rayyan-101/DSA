@@ -1,7 +1,6 @@
 class Solution {
   public:
     vector<int> kthLargest(vector<int>& arr, int k) {
-        // code here
         priority_queue<int> pq;
         vector<int> result;
         for(int i = 0;i<k-1;i++)
