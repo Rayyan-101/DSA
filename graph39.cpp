@@ -13,7 +13,6 @@ long long maximumImportance(int n, vector<vector<int>>& roads) {
         degree[v]++;
     }
 
-    // Sort degrees in ascending order
     sort(begin(degree), end(degree));
 
     long long value = 1;
