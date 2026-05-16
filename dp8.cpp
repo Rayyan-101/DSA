@@ -5,12 +5,10 @@ public:
 
         vector<int> dp(n, -1);
 
-        // base case
         dp[0] = 0;
 
         for(int i = 0; i < n; i++) {
 
-            // unreachable index
             if(dp[i] == -1) continue;
 
             for(int j = i + 1; j < n; j++) {
