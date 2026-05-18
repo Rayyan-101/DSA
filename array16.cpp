@@ -66,7 +66,6 @@ class Solution {
         return lcm(left, right);
     }
     vector<long long> RangeLCMQuery(vector<int> &arr, vector<vector<int>> &queries) {
-        // code here
         int n = arr.size();
 
         seg.resize(4 * n);
