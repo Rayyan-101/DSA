@@ -1,7 +1,6 @@
 class Solution {
   public:
     vector<int> nextPalindrome(vector<int>& num) {
-        // code here
         int n = num.size();
         vector<int> ans = num;
         for(int i = (n+1)/2, j = n-i-1 ; i < n ; i++) {
