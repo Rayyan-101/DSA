@@ -1,7 +1,8 @@
 class Solution {
   public:
     vector<int> reducePairs(vector<int>& arr) {
-         int n=arr.size();
+        // code here
+      int n=arr.size();
       stack<int> st;
       
       for(int i=0; i<n; i++){
