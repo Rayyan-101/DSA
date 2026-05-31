@@ -6,6 +6,7 @@ class Solution {
     
     // Iterate over the input vector
     for(int num : arr) {
+              // If the stack is empty, push the integer onto the stack
         if(stack.empty()) {
             stack.push(num);
         } else {
