@@ -3,7 +3,7 @@ class Solution {
     vector<int> findClosestPair(vector<int> &a, vector<int> &b, int x) {
         int i = 0, j = b.size() - 1;
         int d = 1e18, p = 0, q = 0;
-        
+      
         while(i < a.size() && j >= 0){
             int s = a[i] + b[j];
             if(abs(s - x) < d){
