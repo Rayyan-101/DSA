@@ -9,6 +9,7 @@ public:
             if (x>=mod) x%=mod;
             nums[i]=x;
         }
+        
     }
     static int xorAfterQueries(vector<int>& nums, vector<vector<int>>& queries) {
         for(auto& q: queries)
