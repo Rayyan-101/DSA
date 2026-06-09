@@ -17,7 +17,8 @@ class Solution {
         }
         return flag;
     }
-  
+
+
     bool isPalinArray(vector<int> &arr) {
         // code here
         int n=arr.size();
