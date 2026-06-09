@@ -25,6 +25,7 @@ public:
             
             if (second_longest > longest)
                 swap(longest, second_longest);
+            
         }
         
         // Best chain going *down* from this node (including itself)
