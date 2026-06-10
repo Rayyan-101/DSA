@@ -12,6 +12,7 @@ class Solution {
         for(int i = k-1;i<arr.size();i++)
         {
             pq.push(-arr[i]);
+          
             if(pq.size()>k)
             {
                 pq.pop();
