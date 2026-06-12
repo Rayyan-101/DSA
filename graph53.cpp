@@ -13,7 +13,6 @@ class Solution {
             degree[e[1]]++;
         }
         
-        
         queue<int>q;
         
         for(int i = 0; i < V; i++) {
