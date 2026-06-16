@@ -13,6 +13,7 @@ struct segTree {
             seg[idx]=A[l];
             return;
         }
+        
         const int m=(l+r)>>1;
         build(A, 2*idx, l, m);
         build(A, 2*idx+1, m+1, r);
