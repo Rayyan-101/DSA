@@ -24,7 +24,6 @@ public:
         // reduce k
         k = k % n;
         if (k == 0) return head;
-
         // make circular
         tail->next = head;
 
