@@ -3,6 +3,7 @@
 static constexpr int N=1<<17; // enough for 5*10^4
 int seg[N]; // as global variable
 
+
 struct segTree {
     unsigned n;
     segTree(vector<int>& A) : n(A.size()) {
