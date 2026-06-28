@@ -21,6 +21,7 @@ public:
             n++;
         }
 
+        
         // reduce k
         k = k % n;
         if (k == 0) return head;
