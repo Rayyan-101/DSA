@@ -1,0 +1,35 @@
+/* Node Structure
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+        left = nullptr;
+        right = nullptr;
+    }
+}
+*/
+
+class Solution {
+  private:
+	int fn(Node *root, int &maxSum) {
+		if (root == nullptr)return - 1e4;
+		if (root->left == nullptr && root->right == nullptr)return root->data;
+
+		int left = fn(root->left, maxSum);
+		int right = fn(root->right, maxSum);
+		if (left != -1e4 && right != -1e4) {
+			maxSum = max({maxSum, left + root->data + right});
+		}
+		return max(left + root->data, right + root->data);
+	}
+	public:
+	int maxPathSum(Node *root) {
+		// code here
+		int maxSum = INT_MIN;
+		fn(root, maxSum);
+		return maxSum == INT_MIN?-1:maxSum;
+    }
+};
